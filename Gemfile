@@ -11,5 +11,5 @@ gem 'sinatra-contrib'
 gem "rake"
 gem "activerecord"
 gem "sinatra-activerecord"
-gem 'sqlite3', '~> 1.3', '>= 1.3.13'
+gem 'sqlite3', '1.3.13'
 gem 'rdiscount', '~> 2.2', '>= 2.2.0.1'
