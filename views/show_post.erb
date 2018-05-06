@@ -1,0 +1,16 @@
+<h3 class="pb-3 mb-4 font-italic border-bottom">
+  投稿内容
+</h3>
+  <h2 class="blog-post-title">
+    <a href="<%=	 link_edit_to @post.id %>" class="text-dark">
+      <%= @post.title %></a>
+  </h2>
+  <p class="blog-post-meta">
+    投稿:<%= blog_time(@post.created_at) %>  更新:<%= blog_time(@post.updated_at)%>
+  </p>
+
+  <%= markdown @post.content %>
+
+<nav class="blog-pagination">
+  <a class="btn btn-outline-primary" href="<%=	 link_app_to "" %>">戻る </a>
+</nav>

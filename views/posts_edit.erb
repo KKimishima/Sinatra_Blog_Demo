@@ -1,0 +1,22 @@
+<!-- 投稿フォーム -->
+<h3 class="pb-3 mb-4 font-italic border-bottom">
+  編集
+</h3>
+<form action="<%=	 link_edit_to @edit.id %>" method="post" name="post_form">
+<!--  隠しておくpostid-->
+  <input type="hidden" name="id" readonly value="<%= @edit.id %>"/>
+
+  <div class="form-group">
+    <label for="UserName" class="form-cotntrol font-italic">タイトル</label>
+    <input type="text" name="title" id="title" class="form-control" value="<%= @edit.title %>">
+  </div>
+  <div class="form-group">
+    <label for="body" class="form-label font-italic">
+      登録内容
+    </label>
+    <textarea name="content" id="text" cols="30" rows="10" placeholder="投稿内容" class="form-control font-italic"><%= @edit.content %></textarea>
+    <p class="help-block">10000文字まで入力できます</p>
+  </div>
+  <input class="btn btn-outline-primary" type="submit" value="投稿">
+  <a class="btn btn-outline-danger" href="<%=	 link_edit_to "delete/#{@edit.id }"%>">削除</a>
+</form>

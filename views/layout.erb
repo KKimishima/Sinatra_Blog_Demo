@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>Sinatra Blog Demo KKimishima</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/blog.css">
+  <script src="/js/test.js"></script>
+</head>
+<body>
+<div class="container">
+  <header class="blog-header py-3">
+    <div class="text-center">
+      <a class="blog-header-logo text-dark" href="<%=	 link_app_to "" %>">Sinatra Blog Demo KKimishima</a>
+    </div>
+  </header>
+  <div class="nav-scroller py-1 mb-2">
+    <a class="p-2 text-muted" href="<%=	 link_app_to "" %>">Top</a>
+    <a class="p-2 text-muted" href="<%=	 link_edit_to "" %>">投稿</a>
+    <a class="p-2 text-muted" href="#">このブロクについて</a>
+    <a class="p-2 text-muted" href="<%=	 link_login_to "" %>">ログイン</a>
+  </div>
+
+  <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+    <div class="col-md-6 px-0">
+      <h1 class="display-4 font-italic">RubySinatraで<br>ブログで作る!!!</h1>
+      <p class="lead my-3">Ruby on Railsを学習する前にSinatraでBlogを<br>作って学習していく!!!</p>
+    </div>
+  </div>
+
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8 blog-main">
+
+
+        <div class="blog-post">
+
+          <%= yield %>
+
+        </div>
+
+
+      </div><!-- /.blog-main-->
+
+      <aside class="col-md-4 blog-sidebar">
+
+        <div class="p-3">
+          <h4 class="font-italic">アーカイブ</h4>
+          <ol class="list-unstyled mb-0">
+            <li><a href="<%=	 link_archive_to "20180501" %>">2018年5月</a></li>
+            <li><a href="<%=	 link_archive_to "20180601" %>">2018年6月</a></li>
+
+          </ol>
+        </div>
+
+        <div class="p-3">
+          <h4 class="font-italic">リンク</h4>
+          <ol class="list-unstyled">
+            <li><a href="https://github.com/KKimishima">GitHub</a></li>
+            <li><a href="https://twitter.com/k_kimikatsu123">Twitter</a></li>
+          </ol>
+        </div>
+      </aside><!-- /.blog-sidebar -->
+
+    </div><!-- /.row -->
+
+  </main>
+
+</div>
+
+
+</body>
+</html>

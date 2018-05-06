@@ -1,0 +1,19 @@
+<h3 class="pb-3 mb-4 font-italic border-bottom">
+  投稿一覧
+</h3>
+<% @post.each do |p| %>
+  <h2 class="blog-post-title">
+    <a href="<%=	 link_show_to p.id %>" class="text-dark">
+      <%= p.title %></a>
+  </h2>
+  <p class="blog-post-meta">
+    投稿:<%= blog_time(p.created_at) %>  更新:<%= blog_time(p.updated_at)%>
+  </p>
+
+  <%= markdown(cut_long_contents(p.content)) %>
+
+<% end %>
+<nav class="blog-pagination">
+  <a class="btn btn-outline-primary" href="<%=	 link_page_to @previous_page %>">前へ </a>
+  <a class="btn btn-outline-primary" href="<%=	 link_page_to @next_page %>">次へ</a>
+</nav>
