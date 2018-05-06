@@ -1,0 +1,5 @@
+.bundle/
+.ide/
+db/development.sqlite3
+vendor/
+*.iml
