@@ -1,9 +1,7 @@
 class AppController < Sinatra::Base
   # フォルダ設定
   set :views => File.expand_path("../views",File.dirname(__FILE__))
-  set :public_folder => File.expand_path("../public",File.dirname(__FILE__))
-
-
+  set :public_folder => File.expand_path("../../public",File.dirname(__FILE__))
   # ヘルパー設定
   helpers AppHelper
 

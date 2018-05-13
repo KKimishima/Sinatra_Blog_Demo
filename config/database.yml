@@ -15,8 +15,12 @@ development:
 #  pool: 5
 #  timeout: 5000
 #
-#production:
-#  adapter: sqlite3
-#  database: db/production.sqlite3
-#  pool: 5
-#  timeout: 5000
+production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  # 以下の3つを追加
+  username: postgres
+  password: test
+  # RailsサーバとPostgreSQLサーバが同じ場合
+  host: localhost
